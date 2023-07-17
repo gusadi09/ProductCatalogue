@@ -13,6 +13,8 @@
 		EC1175242A65A23400452D2A /* Bool+orFalse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1175232A65A23400452D2A /* Bool+orFalse.swift */; };
 		EC1175282A65A28700452D2A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EC11752A2A65A28700452D2A /* Localizable.strings */; };
 		EC11752D2A65A2B400452D2A /* LocalizableString.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC11752C2A65A2B400452D2A /* LocalizableString.swift */; };
+		EC1175342A65A9EF00452D2A /* CatalogueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1175332A65A9EF00452D2A /* CatalogueView.swift */; };
+		EC1175372A65AA7100452D2A /* FavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1175362A65AA7100452D2A /* FavoriteView.swift */; };
 		EC84845A2A650389006AEAF8 /* ProductCatalogueApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8484592A650389006AEAF8 /* ProductCatalogueApp.swift */; };
 		EC84845C2A650389006AEAF8 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC84845B2A650389006AEAF8 /* Persistence.swift */; };
 		EC84845F2A650389006AEAF8 /* ProductCatalogue.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EC84845D2A650389006AEAF8 /* ProductCatalogue.xcdatamodeld */; };
@@ -40,6 +42,8 @@
 		EC1175292A65A28700452D2A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EC11752B2A65A29D00452D2A /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EC11752C2A65A2B400452D2A /* LocalizableString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableString.swift; sourceTree = "<group>"; };
+		EC1175332A65A9EF00452D2A /* CatalogueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueView.swift; sourceTree = "<group>"; };
+		EC1175362A65AA7100452D2A /* FavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteView.swift; sourceTree = "<group>"; };
 		EC8484562A650389006AEAF8 /* ProductCatalogue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProductCatalogue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC8484592A650389006AEAF8 /* ProductCatalogueApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCatalogueApp.swift; sourceTree = "<group>"; };
 		EC84845B2A650389006AEAF8 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -146,6 +150,48 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		EC1175302A65A9C800452D2A /* Favorite */ = {
+			isa = PBXGroup;
+			children = (
+				EC1175352A65A9F500452D2A /* View */,
+			);
+			path = Favorite;
+			sourceTree = "<group>";
+		};
+		EC1175312A65A9D700452D2A /* Catalogue */ = {
+			isa = PBXGroup;
+			children = (
+				EC1175322A65A9DF00452D2A /* View */,
+			);
+			path = Catalogue;
+			sourceTree = "<group>";
+		};
+		EC1175322A65A9DF00452D2A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EC1175332A65A9EF00452D2A /* CatalogueView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EC1175352A65A9F500452D2A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EC1175362A65AA7100452D2A /* FavoriteView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EC1175382A65AA7C00452D2A /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				EC1175312A65A9D700452D2A /* Catalogue */,
+				EC1175302A65A9C800452D2A /* Favorite */,
+				EC11752E2A65A83300452D2A /* TabContainer */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
 		EC84844D2A650389006AEAF8 = {
 			isa = PBXGroup;
 			children = (
@@ -167,8 +213,8 @@
 		EC8484582A650389006AEAF8 /* ProductCatalogue */ = {
 			isa = PBXGroup;
 			children = (
+				EC1175382A65AA7C00452D2A /* Feature */,
 				EC84848D2A6503FE006AEAF8 /* Common */,
-				EC11752E2A65A83300452D2A /* TabContainer */,
 				EC8484652A65038B006AEAF8 /* Preview Content */,
 			);
 			path = ProductCatalogue;
@@ -340,8 +386,10 @@
 			files = (
 				EC1175242A65A23400452D2A /* Bool+orFalse.swift in Sources */,
 				EC84845A2A650389006AEAF8 /* ProductCatalogueApp.swift in Sources */,
+				EC1175342A65A9EF00452D2A /* CatalogueView.swift in Sources */,
 				EC84845F2A650389006AEAF8 /* ProductCatalogue.xcdatamodeld in Sources */,
 				EC8484612A650389006AEAF8 /* TabContainerView.swift in Sources */,
+				EC1175372A65AA7100452D2A /* FavoriteView.swift in Sources */,
 				EC11752D2A65A2B400452D2A /* LocalizableString.swift in Sources */,
 				EC1175212A65A21D00452D2A /* Int+orZero.swift in Sources */,
 				EC11751E2A65A1F800452D2A /* Double+orZero.swift in Sources */,
