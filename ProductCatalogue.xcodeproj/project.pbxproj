@@ -7,15 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC11751B2A65A19000452D2A /* String+orEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC11751A2A65A19000452D2A /* String+orEmpty.swift */; };
+		EC11751E2A65A1F800452D2A /* Double+orZero.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC11751D2A65A1F800452D2A /* Double+orZero.swift */; };
+		EC1175212A65A21D00452D2A /* Int+orZero.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1175202A65A21D00452D2A /* Int+orZero.swift */; };
+		EC1175242A65A23400452D2A /* Bool+orFalse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1175232A65A23400452D2A /* Bool+orFalse.swift */; };
+		EC1175282A65A28700452D2A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EC11752A2A65A28700452D2A /* Localizable.strings */; };
+		EC11752D2A65A2B400452D2A /* LocalizableString.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC11752C2A65A2B400452D2A /* LocalizableString.swift */; };
 		EC84845A2A650389006AEAF8 /* ProductCatalogueApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8484592A650389006AEAF8 /* ProductCatalogueApp.swift */; };
 		EC84845C2A650389006AEAF8 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC84845B2A650389006AEAF8 /* Persistence.swift */; };
 		EC84845F2A650389006AEAF8 /* ProductCatalogue.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EC84845D2A650389006AEAF8 /* ProductCatalogue.xcdatamodeld */; };
-		EC8484612A650389006AEAF8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8484602A650389006AEAF8 /* ContentView.swift */; };
+		EC8484612A650389006AEAF8 /* TabContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8484602A650389006AEAF8 /* TabContainerView.swift */; };
 		EC8484632A65038B006AEAF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC8484622A65038B006AEAF8 /* Assets.xcassets */; };
 		EC8484672A65038B006AEAF8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC8484662A65038B006AEAF8 /* Preview Assets.xcassets */; };
 		EC8484712A65038B006AEAF8 /* ProductCatalogueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8484702A65038B006AEAF8 /* ProductCatalogueTests.swift */; };
-		EC84847B2A65038B006AEAF8 /* ProductCatalogueUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC84847A2A65038B006AEAF8 /* ProductCatalogueUITests.swift */; };
-		EC84847D2A65038B006AEAF8 /* ProductCatalogueUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC84847C2A65038B006AEAF8 /* ProductCatalogueUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,29 +30,26 @@
 			remoteGlobalIDString = EC8484552A650389006AEAF8;
 			remoteInfo = ProductCatalogue;
 		};
-		EC8484772A65038B006AEAF8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EC84844E2A650389006AEAF8 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EC8484552A650389006AEAF8;
-			remoteInfo = ProductCatalogue;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EC11751A2A65A19000452D2A /* String+orEmpty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+orEmpty.swift"; sourceTree = "<group>"; };
+		EC11751D2A65A1F800452D2A /* Double+orZero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+orZero.swift"; sourceTree = "<group>"; };
+		EC1175202A65A21D00452D2A /* Int+orZero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+orZero.swift"; sourceTree = "<group>"; };
+		EC1175232A65A23400452D2A /* Bool+orFalse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bool+orFalse.swift"; sourceTree = "<group>"; };
+		EC1175292A65A28700452D2A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EC11752B2A65A29D00452D2A /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EC11752C2A65A2B400452D2A /* LocalizableString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableString.swift; sourceTree = "<group>"; };
 		EC8484562A650389006AEAF8 /* ProductCatalogue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProductCatalogue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC8484592A650389006AEAF8 /* ProductCatalogueApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCatalogueApp.swift; sourceTree = "<group>"; };
 		EC84845B2A650389006AEAF8 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		EC84845E2A650389006AEAF8 /* ProductCatalogue.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ProductCatalogue.xcdatamodel; sourceTree = "<group>"; };
-		EC8484602A650389006AEAF8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EC8484602A650389006AEAF8 /* TabContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabContainerView.swift; sourceTree = "<group>"; };
 		EC8484622A65038B006AEAF8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC8484642A65038B006AEAF8 /* ProductCatalogue.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ProductCatalogue.entitlements; sourceTree = "<group>"; };
 		EC8484662A65038B006AEAF8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EC84846C2A65038B006AEAF8 /* ProductCatalogueTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProductCatalogueTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC8484702A65038B006AEAF8 /* ProductCatalogueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCatalogueTests.swift; sourceTree = "<group>"; };
-		EC8484762A65038B006AEAF8 /* ProductCatalogueUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProductCatalogueUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		EC84847A2A65038B006AEAF8 /* ProductCatalogueUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCatalogueUITests.swift; sourceTree = "<group>"; };
-		EC84847C2A65038B006AEAF8 /* ProductCatalogueUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCatalogueUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,22 +67,90 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EC8484732A65038B006AEAF8 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EC1175172A65A16800452D2A /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				EC1175222A65A22A00452D2A /* Bool */,
+				EC11751F2A65A20700452D2A /* Int */,
+				EC11751C2A65A1E700452D2A /* Double */,
+				EC1175192A65A17B00452D2A /* String */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		EC1175182A65A17000452D2A /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				EC1175252A65A27700452D2A /* String */,
+				EC11752C2A65A2B400452D2A /* LocalizableString.swift */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		EC1175192A65A17B00452D2A /* String */ = {
+			isa = PBXGroup;
+			children = (
+				EC11751A2A65A19000452D2A /* String+orEmpty.swift */,
+			);
+			path = String;
+			sourceTree = "<group>";
+		};
+		EC11751C2A65A1E700452D2A /* Double */ = {
+			isa = PBXGroup;
+			children = (
+				EC11751D2A65A1F800452D2A /* Double+orZero.swift */,
+			);
+			path = Double;
+			sourceTree = "<group>";
+		};
+		EC11751F2A65A20700452D2A /* Int */ = {
+			isa = PBXGroup;
+			children = (
+				EC1175202A65A21D00452D2A /* Int+orZero.swift */,
+			);
+			path = Int;
+			sourceTree = "<group>";
+		};
+		EC1175222A65A22A00452D2A /* Bool */ = {
+			isa = PBXGroup;
+			children = (
+				EC1175232A65A23400452D2A /* Bool+orFalse.swift */,
+			);
+			path = Bool;
+			sourceTree = "<group>";
+		};
+		EC1175252A65A27700452D2A /* String */ = {
+			isa = PBXGroup;
+			children = (
+				EC11752A2A65A28700452D2A /* Localizable.strings */,
+			);
+			path = String;
+			sourceTree = "<group>";
+		};
+		EC11752E2A65A83300452D2A /* TabContainer */ = {
+			isa = PBXGroup;
+			children = (
+				EC11752F2A65A8AD00452D2A /* View */,
+			);
+			path = TabContainer;
+			sourceTree = "<group>";
+		};
+		EC11752F2A65A8AD00452D2A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EC8484602A650389006AEAF8 /* TabContainerView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		EC84844D2A650389006AEAF8 = {
 			isa = PBXGroup;
 			children = (
 				EC8484582A650389006AEAF8 /* ProductCatalogue */,
 				EC84846F2A65038B006AEAF8 /* ProductCatalogueTests */,
-				EC8484792A65038B006AEAF8 /* ProductCatalogueUITests */,
 				EC8484572A650389006AEAF8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -91,7 +160,6 @@
 			children = (
 				EC8484562A650389006AEAF8 /* ProductCatalogue.app */,
 				EC84846C2A65038B006AEAF8 /* ProductCatalogueTests.xctest */,
-				EC8484762A65038B006AEAF8 /* ProductCatalogueUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,12 +167,8 @@
 		EC8484582A650389006AEAF8 /* ProductCatalogue */ = {
 			isa = PBXGroup;
 			children = (
-				EC8484592A650389006AEAF8 /* ProductCatalogueApp.swift */,
-				EC84845B2A650389006AEAF8 /* Persistence.swift */,
-				EC8484602A650389006AEAF8 /* ContentView.swift */,
-				EC8484622A65038B006AEAF8 /* Assets.xcassets */,
-				EC8484642A65038B006AEAF8 /* ProductCatalogue.entitlements */,
-				EC84845D2A650389006AEAF8 /* ProductCatalogue.xcdatamodeld */,
+				EC84848D2A6503FE006AEAF8 /* Common */,
+				EC11752E2A65A83300452D2A /* TabContainer */,
 				EC8484652A65038B006AEAF8 /* Preview Content */,
 			);
 			path = ProductCatalogue;
@@ -126,13 +190,50 @@
 			path = ProductCatalogueTests;
 			sourceTree = "<group>";
 		};
-		EC8484792A65038B006AEAF8 /* ProductCatalogueUITests */ = {
+		EC8484892A6503D1006AEAF8 /* LocalStorage */ = {
 			isa = PBXGroup;
 			children = (
-				EC84847A2A65038B006AEAF8 /* ProductCatalogueUITests.swift */,
-				EC84847C2A65038B006AEAF8 /* ProductCatalogueUITestsLaunchTests.swift */,
+				EC84845B2A650389006AEAF8 /* Persistence.swift */,
+				EC84845D2A650389006AEAF8 /* ProductCatalogue.xcdatamodeld */,
 			);
-			path = ProductCatalogueUITests;
+			path = LocalStorage;
+			sourceTree = "<group>";
+		};
+		EC84848A2A6503DC006AEAF8 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				EC8484592A650389006AEAF8 /* ProductCatalogueApp.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		EC84848B2A6503E2006AEAF8 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				EC8484622A65038B006AEAF8 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		EC84848C2A6503EE006AEAF8 /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				EC8484642A65038B006AEAF8 /* ProductCatalogue.entitlements */,
+			);
+			path = Environment;
+			sourceTree = "<group>";
+		};
+		EC84848D2A6503FE006AEAF8 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				EC1175182A65A17000452D2A /* Localization */,
+				EC1175172A65A16800452D2A /* Extension */,
+				EC84848A2A6503DC006AEAF8 /* Base */,
+				EC8484892A6503D1006AEAF8 /* LocalStorage */,
+				EC84848B2A6503E2006AEAF8 /* Assets */,
+				EC84848C2A6503EE006AEAF8 /* Environment */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,24 +274,6 @@
 			productReference = EC84846C2A65038B006AEAF8 /* ProductCatalogueTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		EC8484752A65038B006AEAF8 /* ProductCatalogueUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = EC8484862A65038B006AEAF8 /* Build configuration list for PBXNativeTarget "ProductCatalogueUITests" */;
-			buildPhases = (
-				EC8484722A65038B006AEAF8 /* Sources */,
-				EC8484732A65038B006AEAF8 /* Frameworks */,
-				EC8484742A65038B006AEAF8 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				EC8484782A65038B006AEAF8 /* PBXTargetDependency */,
-			);
-			name = ProductCatalogueUITests;
-			productName = ProductCatalogueUITests;
-			productReference = EC8484762A65038B006AEAF8 /* ProductCatalogueUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -208,10 +291,6 @@
 						CreatedOnToolsVersion = 14.3.1;
 						TestTargetID = EC8484552A650389006AEAF8;
 					};
-					EC8484752A65038B006AEAF8 = {
-						CreatedOnToolsVersion = 14.3.1;
-						TestTargetID = EC8484552A650389006AEAF8;
-					};
 				};
 			};
 			buildConfigurationList = EC8484512A650389006AEAF8 /* Build configuration list for PBXProject "ProductCatalogue" */;
@@ -221,6 +300,7 @@
 			knownRegions = (
 				en,
 				Base,
+				id,
 			);
 			mainGroup = EC84844D2A650389006AEAF8;
 			productRefGroup = EC8484572A650389006AEAF8 /* Products */;
@@ -229,7 +309,6 @@
 			targets = (
 				EC8484552A650389006AEAF8 /* ProductCatalogue */,
 				EC84846B2A65038B006AEAF8 /* ProductCatalogueTests */,
-				EC8484752A65038B006AEAF8 /* ProductCatalogueUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -240,18 +319,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC8484672A65038B006AEAF8 /* Preview Assets.xcassets in Resources */,
+				EC1175282A65A28700452D2A /* Localizable.strings in Resources */,
 				EC8484632A65038B006AEAF8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		EC84846A2A65038B006AEAF8 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EC8484742A65038B006AEAF8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -265,10 +338,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC1175242A65A23400452D2A /* Bool+orFalse.swift in Sources */,
 				EC84845A2A650389006AEAF8 /* ProductCatalogueApp.swift in Sources */,
 				EC84845F2A650389006AEAF8 /* ProductCatalogue.xcdatamodeld in Sources */,
-				EC8484612A650389006AEAF8 /* ContentView.swift in Sources */,
+				EC8484612A650389006AEAF8 /* TabContainerView.swift in Sources */,
+				EC11752D2A65A2B400452D2A /* LocalizableString.swift in Sources */,
+				EC1175212A65A21D00452D2A /* Int+orZero.swift in Sources */,
+				EC11751E2A65A1F800452D2A /* Double+orZero.swift in Sources */,
 				EC84845C2A650389006AEAF8 /* Persistence.swift in Sources */,
+				EC11751B2A65A19000452D2A /* String+orEmpty.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,15 +358,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EC8484722A65038B006AEAF8 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EC84847D2A65038B006AEAF8 /* ProductCatalogueUITestsLaunchTests.swift in Sources */,
-				EC84847B2A65038B006AEAF8 /* ProductCatalogueUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -297,18 +366,26 @@
 			target = EC8484552A650389006AEAF8 /* ProductCatalogue */;
 			targetProxy = EC84846D2A65038B006AEAF8 /* PBXContainerItemProxy */;
 		};
-		EC8484782A65038B006AEAF8 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = EC8484552A650389006AEAF8 /* ProductCatalogue */;
-			targetProxy = EC8484772A65038B006AEAF8 /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EC11752A2A65A28700452D2A /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC1175292A65A28700452D2A /* en */,
+				EC11752B2A65A29D00452D2A /* id */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		EC84847E2A65038B006AEAF8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -367,6 +444,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -419,7 +497,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = ProductCatalogue/ProductCatalogue.entitlements;
+				CODE_SIGN_ENTITLEMENTS = ProductCatalogue/Common/Environment/ProductCatalogue.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ProductCatalogue/Preview Content\"";
@@ -457,7 +535,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = ProductCatalogue/ProductCatalogue.entitlements;
+				CODE_SIGN_ENTITLEMENTS = ProductCatalogue/Common/Environment/ProductCatalogue.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ProductCatalogue/Preview Content\"";
@@ -536,50 +614,6 @@
 			};
 			name = Release;
 		};
-		EC8484872A65038B006AEAF8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6M5M727687;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
-				MACOSX_DEPLOYMENT_TARGET = 13.3;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.ProductCatalogueUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = ProductCatalogue;
-			};
-			name = Debug;
-		};
-		EC8484882A65038B006AEAF8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6M5M727687;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
-				MACOSX_DEPLOYMENT_TARGET = 13.3;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.ProductCatalogueUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = ProductCatalogue;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -606,15 +640,6 @@
 			buildConfigurations = (
 				EC8484842A65038B006AEAF8 /* Debug */,
 				EC8484852A65038B006AEAF8 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		EC8484862A65038B006AEAF8 /* Build configuration list for PBXNativeTarget "ProductCatalogueUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				EC8484872A65038B006AEAF8 /* Debug */,
-				EC8484882A65038B006AEAF8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
