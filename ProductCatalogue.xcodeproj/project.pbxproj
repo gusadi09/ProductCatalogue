@@ -18,7 +18,7 @@
 		EC11753D2A66513200452D2A /* ProductCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC11753C2A66513200452D2A /* ProductCard.swift */; };
 		EC1175402A66555B00452D2A /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC11753F2A66555B00452D2A /* ImageLoader.swift */; };
 		EC1175422A66558700452D2A /* String+toURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1175412A66558700452D2A /* String+toURL.swift */; };
-		EC1175452A6678F400452D2A /* CatalogController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1175442A6678F400452D2A /* CatalogController.swift */; };
+		EC1175452A6678F400452D2A /* CatalogueController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1175442A6678F400452D2A /* CatalogueController.swift */; };
 		EC1175482A667AB900452D2A /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = EC1175472A667AB900452D2A /* CombineMoya */; };
 		EC11754A2A667AB900452D2A /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = EC1175492A667AB900452D2A /* Moya */; };
 		EC11754C2A667AB900452D2A /* ReactiveMoya in Frameworks */ = {isa = PBXBuildFile; productRef = EC11754B2A667AB900452D2A /* ReactiveMoya */; };
@@ -70,7 +70,7 @@
 		EC11753C2A66513200452D2A /* ProductCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCard.swift; sourceTree = "<group>"; };
 		EC11753F2A66555B00452D2A /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		EC1175412A66558700452D2A /* String+toURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+toURL.swift"; sourceTree = "<group>"; };
-		EC1175442A6678F400452D2A /* CatalogController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogController.swift; sourceTree = "<group>"; };
+		EC1175442A6678F400452D2A /* CatalogueController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueController.swift; sourceTree = "<group>"; };
 		EC1175522A667B9600452D2A /* ProductLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductLocalDataSource.swift; sourceTree = "<group>"; };
 		EC1175552A667BA800452D2A /* ProductRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRemoteDataSource.swift; sourceTree = "<group>"; };
 		EC1175572A667BB800452D2A /* ProductRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRepository.swift; sourceTree = "<group>"; };
@@ -271,7 +271,7 @@
 		EC1175432A6678E900452D2A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				EC1175442A6678F400452D2A /* CatalogController.swift */,
+				EC1175442A6678F400452D2A /* CatalogueController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -615,7 +615,7 @@
 				EC1175582A667BB800452D2A /* ProductRepository.swift in Sources */,
 				EC84845C2A650389006AEAF8 /* Persistence.swift in Sources */,
 				EC11751B2A65A19000452D2A /* String+orEmpty.swift in Sources */,
-				EC1175452A6678F400452D2A /* CatalogController.swift in Sources */,
+				EC1175452A6678F400452D2A /* CatalogueController.swift in Sources */,
 				EC1175652A667C3900452D2A /* DefaultTargetType.swift in Sources */,
 				EC719D3C2A668CF200E1B0BD /* Encodable+toJSONData.swift in Sources */,
 				EC11753D2A66513200452D2A /* ProductCard.swift in Sources */,

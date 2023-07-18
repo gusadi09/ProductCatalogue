@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class CatalogController: ObservableObject {
+final class CatalogueController: ObservableObject {
     @Published var searchText = ""
     @Published var isWishlist = false
 }
