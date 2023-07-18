@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ProductCard: View {
     
-    var url: String
+    @Binding var item: ProductResponse
     var likeAction: () -> Void
     
     var body: some View {
@@ -17,7 +17,7 @@ struct ProductCard: View {
             HStack {
                 Spacer()
                 
-                ImageLoaderView(url: url, height: 140, aspectRatio: .fit)
+                ImageLoaderView(url: item.image, height: 140, aspectRatio: .fit)
                     .clipShape(RoundedRectangle(cornerRadius: 10))
                 
                 Spacer()
@@ -26,7 +26,7 @@ struct ProductCard: View {
             
             VStack(alignment: .leading, spacing: 5) {
                 HStack {
-                    Text("Test")
+                    Text(item.title.orEmpty())
                         .font(.system(size: 16, weight: .regular, design: .rounded))
                         .lineLimit(2)
                     
@@ -44,14 +44,14 @@ struct ProductCard: View {
 
                 }
                 
-                Text("$106.99")
+                Text("$\(String(format: "%0.2f", item.price.orZero()))")
                     .font(.system(size: 16, weight: .bold, design: .rounded))
                 
                 (
                     Text("\(Image(systemName: "star.fill")) ")
                         .foregroundColor(.yellow)
                     +
-                    Text("\(String(format: "%0.2f", 3.69)) (\(120))")
+                    Text("\(String(format: "%0.2f", (item.rating?.rate).orZero())) (\((item.rating?.count).orZero()))")
                         .foregroundColor(Color(.darkGray))
                 )
                 .font(.system(size: 14))
@@ -67,23 +67,10 @@ struct ProductCard: View {
     }
 }
 
-struct Preview: View {
-    var body: some View {
-        LazyVGrid(columns: [GridItem(.adaptive(minimum: 170))]) {
-            ForEach(0...3, id: \.self) { item in
-                ProductCard(
-                    url: item % 2 == 0 ? "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg" : "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
-                    likeAction: {}
-                )
-            }
-            
-        }
-        .padding()
-    }
-}
-
 struct ProductCard_Previews: PreviewProvider {
     static var previews: some View {
-        Preview()
+        LazyVGrid(columns: [GridItem(.adaptive(minimum: 150))]) {
+            ProductCard(item: .constant(ProductResponse.sample), likeAction: {})
+        }
     }
 }
