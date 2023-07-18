@@ -63,6 +63,7 @@ struct ProductCard: View {
                 .foregroundColor(.white)
                 .shadow(color: .black.opacity(0.1), radius: 4, x: 0, y: 0)
         )
+        .buttonStyle(.plain)
     }
 }
 

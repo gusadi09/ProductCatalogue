@@ -26,6 +26,7 @@ struct ImageLoaderView: View {
             switch phase {
             case .empty:
                 ProgressView()
+                    .frame(width: width, height: height)
             case .success(let image):
                 image
                     .resizable()
@@ -34,9 +35,11 @@ struct ImageLoaderView: View {
             case .failure(_):
                 Image(systemName: "person.crop.circle.badge.exclamationmark.fill")
                     .foregroundColor(.white)
+                    .frame(width: width, height: height)
                 
             @unknown default:
                 ProgressView()
+                    .frame(width: width, height: height)
             }
         }
     }
