@@ -6,3 +6,8 @@
 //
 
 import Foundation
+import Moya
+
+protocol ProductRemoteDataSource {
+    func getAllProducts() async throws -> ProductsListResponse
+}
