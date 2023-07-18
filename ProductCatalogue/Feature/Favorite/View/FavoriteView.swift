@@ -43,9 +43,16 @@ struct FavoriteView: View {
                 controller.onAppear()
             }
             .alert(isPresented: $controller.isError) {
-                Alert(title: Text("Attention"), message: Text(controller.error.orEmpty()), dismissButton: .destructive(Text("Retry"), action: {
-                    controller.onAppear()
-                }))
+                Alert(
+                    title: Text(LocalizableString.generalAttention),
+                    message: Text(controller.error.orEmpty()),
+                    dismissButton: .destructive(
+                        Text(LocalizableString.generalRetry),
+                        action: {
+                            controller.onAppear()
+                        }
+                    )
+                )
             }
         }
     }
