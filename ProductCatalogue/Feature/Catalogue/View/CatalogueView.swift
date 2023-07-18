@@ -8,9 +8,7 @@
 import SwiftUI
 
 struct CatalogueView: View {
-    
-    @State var searchText = ""
-    @State var isWishlist = false
+    @ObservedObject var controller = CatalogController()
     
     var body: some View {
         NavigationStack {
@@ -36,14 +34,14 @@ struct CatalogueView: View {
             }
             .navigationTitle("Catalogue")
             .toolbar {
-                Toggle("\(Image(systemName: "heart"))", isOn: $isWishlist)
-                    .foregroundColor(isWishlist ? .white : .red)
+                Toggle("\(Image(systemName: "heart"))", isOn: $controller.isWishlist)
+                    .foregroundColor(controller.isWishlist ? .white : .red)
                     .tint(Color.red)
 
             }
             
         }
-        .searchable(text: $searchText, prompt: Text("Find Product..."))
+        .searchable(text: $controller.searchText, prompt: Text("Find Product..."))
     }
 }
 
