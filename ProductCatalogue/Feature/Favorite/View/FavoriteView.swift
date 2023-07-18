@@ -8,8 +8,32 @@
 import SwiftUI
 
 struct FavoriteView: View {
+    @ObservedObject var controller = FavouriteController()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+            VStack {
+                List {
+                    LazyVGrid(columns: [GridItem(.adaptive(minimum: 150))]) {
+                        ForEach(controller.wishlistedFilter(), id: \.id) { product in
+                            ProductCard(
+                                item: product,
+                                isWishlisted: controller.isWishlisted(item: product),
+                                likeAction: {
+                                    controller.removeFavorite(product)
+                                }
+                            )
+                        }
+                    }
+                    .listRowSeparator(.hidden)
+                }
+                .listStyle(.plain)
+            }
+            .navigationTitle(LocalizableString.favouriteTitle)
+            .onAppear {
+                controller.onAppear()
+            }
+        }
     }
 }
 

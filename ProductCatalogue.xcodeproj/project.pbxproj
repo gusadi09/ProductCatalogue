@@ -40,6 +40,7 @@
 		EC719D3F2A668D0A00E1B0BD /* Encodable+toJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC719D3E2A668D0A00E1B0BD /* Encodable+toJSON.swift */; };
 		EC719D432A66A51F00E1B0BD /* RepositoryStubHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC719D422A66A51F00E1B0BD /* RepositoryStubHelper.swift */; };
 		EC719D452A66A83200E1B0BD /* ProductRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC719D442A66A83200E1B0BD /* ProductRepositoryTests.swift */; };
+		EC719D502A66DAAD00E1B0BD /* FavoriteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC719D4F2A66DAAD00E1B0BD /* FavoriteController.swift */; };
 		EC84845A2A650389006AEAF8 /* ProductCatalogueApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8484592A650389006AEAF8 /* ProductCatalogueApp.swift */; };
 		EC84845C2A650389006AEAF8 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC84845B2A650389006AEAF8 /* Persistence.swift */; };
 		EC84845F2A650389006AEAF8 /* ProductCatalogue.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EC84845D2A650389006AEAF8 /* ProductCatalogue.xcdatamodeld */; };
@@ -90,6 +91,7 @@
 		EC719D422A66A51F00E1B0BD /* RepositoryStubHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryStubHelper.swift; sourceTree = "<group>"; };
 		EC719D442A66A83200E1B0BD /* ProductRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRepositoryTests.swift; sourceTree = "<group>"; };
 		EC719D462A66ADC800E1B0BD /* ProductCatalogue.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = ProductCatalogue.xctestplan; sourceTree = "<group>"; };
+		EC719D4F2A66DAAD00E1B0BD /* FavoriteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteController.swift; sourceTree = "<group>"; };
 		EC8484562A650389006AEAF8 /* ProductCatalogue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProductCatalogue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC8484592A650389006AEAF8 /* ProductCatalogueApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCatalogueApp.swift; sourceTree = "<group>"; };
 		EC84845B2A650389006AEAF8 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 		EC1175302A65A9C800452D2A /* Favorite */ = {
 			isa = PBXGroup;
 			children = (
+				EC719D4E2A66DA9D00E1B0BD /* Controller */,
 				EC1175352A65A9F500452D2A /* View */,
 			);
 			path = Favorite;
@@ -408,6 +411,14 @@
 				EC719D442A66A83200E1B0BD /* ProductRepositoryTests.swift */,
 			);
 			path = Product;
+			sourceTree = "<group>";
+		};
+		EC719D4E2A66DA9D00E1B0BD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EC719D4F2A66DAAD00E1B0BD /* FavoriteController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		EC84844D2A650389006AEAF8 = {
@@ -637,6 +648,7 @@
 				EC84845C2A650389006AEAF8 /* Persistence.swift in Sources */,
 				EC11751B2A65A19000452D2A /* String+orEmpty.swift in Sources */,
 				EC1175452A6678F400452D2A /* CatalogueController.swift in Sources */,
+				EC719D502A66DAAD00E1B0BD /* FavoriteController.swift in Sources */,
 				EC1175652A667C3900452D2A /* DefaultTargetType.swift in Sources */,
 				EC719D3C2A668CF200E1B0BD /* Encodable+toJSONData.swift in Sources */,
 				EC11753D2A66513200452D2A /* ProductCard.swift in Sources */,
