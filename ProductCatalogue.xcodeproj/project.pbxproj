@@ -19,6 +19,10 @@
 		EC1175402A66555B00452D2A /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC11753F2A66555B00452D2A /* ImageLoader.swift */; };
 		EC1175422A66558700452D2A /* String+toURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1175412A66558700452D2A /* String+toURL.swift */; };
 		EC1175452A6678F400452D2A /* CatalogController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1175442A6678F400452D2A /* CatalogController.swift */; };
+		EC1175482A667AB900452D2A /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = EC1175472A667AB900452D2A /* CombineMoya */; };
+		EC11754A2A667AB900452D2A /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = EC1175492A667AB900452D2A /* Moya */; };
+		EC11754C2A667AB900452D2A /* ReactiveMoya in Frameworks */ = {isa = PBXBuildFile; productRef = EC11754B2A667AB900452D2A /* ReactiveMoya */; };
+		EC11754E2A667AB900452D2A /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = EC11754D2A667AB900452D2A /* RxMoya */; };
 		EC84845A2A650389006AEAF8 /* ProductCatalogueApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8484592A650389006AEAF8 /* ProductCatalogueApp.swift */; };
 		EC84845C2A650389006AEAF8 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC84845B2A650389006AEAF8 /* Persistence.swift */; };
 		EC84845F2A650389006AEAF8 /* ProductCatalogue.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EC84845D2A650389006AEAF8 /* ProductCatalogue.xcdatamodeld */; };
@@ -69,6 +73,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC11754A2A667AB900452D2A /* Moya in Frameworks */,
+				EC1175482A667AB900452D2A /* CombineMoya in Frameworks */,
+				EC11754E2A667AB900452D2A /* RxMoya in Frameworks */,
+				EC11754C2A667AB900452D2A /* ReactiveMoya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +350,12 @@
 			dependencies = (
 			);
 			name = ProductCatalogue;
+			packageProductDependencies = (
+				EC1175472A667AB900452D2A /* CombineMoya */,
+				EC1175492A667AB900452D2A /* Moya */,
+				EC11754B2A667AB900452D2A /* ReactiveMoya */,
+				EC11754D2A667AB900452D2A /* RxMoya */,
+			);
 			productName = ProductCatalogue;
 			productReference = EC8484562A650389006AEAF8 /* ProductCatalogue.app */;
 			productType = "com.apple.product-type.application";
@@ -393,6 +407,9 @@
 				id,
 			);
 			mainGroup = EC84844D2A650389006AEAF8;
+			packageReferences = (
+				EC1175462A667AB900452D2A /* XCRemoteSwiftPackageReference "Moya" */,
+			);
 			productRefGroup = EC8484572A650389006AEAF8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -741,6 +758,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EC1175462A667AB900452D2A /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 15.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EC1175472A667AB900452D2A /* CombineMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EC1175462A667AB900452D2A /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = CombineMoya;
+		};
+		EC1175492A667AB900452D2A /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EC1175462A667AB900452D2A /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+		EC11754B2A667AB900452D2A /* ReactiveMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EC1175462A667AB900452D2A /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = ReactiveMoya;
+		};
+		EC11754D2A667AB900452D2A /* RxMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EC1175462A667AB900452D2A /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = RxMoya;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		EC84845D2A650389006AEAF8 /* ProductCatalogue.xcdatamodeld */ = {
