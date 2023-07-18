@@ -34,6 +34,7 @@
 		EC1175682A66864100452D2A /* Moya+defaultProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1175672A66864100452D2A /* Moya+defaultProvider.swift */; };
 		EC11756A2A66865900452D2A /* Moya+Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1175692A66865900452D2A /* Moya+Request.swift */; };
 		EC11756D2A66887400452D2A /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC11756C2A66887400452D2A /* ErrorResponse.swift */; };
+		EC719D362A668ACF00E1B0BD /* ProductResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC719D352A668ACF00E1B0BD /* ProductResponse.swift */; };
 		EC84845A2A650389006AEAF8 /* ProductCatalogueApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8484592A650389006AEAF8 /* ProductCatalogueApp.swift */; };
 		EC84845C2A650389006AEAF8 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC84845B2A650389006AEAF8 /* Persistence.swift */; };
 		EC84845F2A650389006AEAF8 /* ProductCatalogue.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EC84845D2A650389006AEAF8 /* ProductCatalogue.xcdatamodeld */; };
@@ -78,6 +79,7 @@
 		EC1175672A66864100452D2A /* Moya+defaultProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Moya+defaultProvider.swift"; sourceTree = "<group>"; };
 		EC1175692A66865900452D2A /* Moya+Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Moya+Request.swift"; sourceTree = "<group>"; };
 		EC11756C2A66887400452D2A /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
+		EC719D352A668ACF00E1B0BD /* ProductResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductResponse.swift; sourceTree = "<group>"; };
 		EC8484562A650389006AEAF8 /* ProductCatalogue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProductCatalogue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC8484592A650389006AEAF8 /* ProductCatalogueApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCatalogueApp.swift; sourceTree = "<group>"; };
 		EC84845B2A650389006AEAF8 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -341,6 +343,7 @@
 		EC11756B2A66886900452D2A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EC719D342A668AC100E1B0BD /* Product */,
 				EC719D332A668A6B00E1B0BD /* General */,
 			);
 			path = Model;
@@ -352,6 +355,14 @@
 				EC11756C2A66887400452D2A /* ErrorResponse.swift */,
 			);
 			path = General;
+			sourceTree = "<group>";
+		};
+		EC719D342A668AC100E1B0BD /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				EC719D352A668ACF00E1B0BD /* ProductResponse.swift */,
+			);
+			path = Product;
 			sourceTree = "<group>";
 		};
 		EC84844D2A650389006AEAF8 = {
@@ -573,6 +584,7 @@
 				EC1175422A66558700452D2A /* String+toURL.swift in Sources */,
 				EC1175212A65A21D00452D2A /* Int+orZero.swift in Sources */,
 				EC11751E2A65A1F800452D2A /* Double+orZero.swift in Sources */,
+				EC719D362A668ACF00E1B0BD /* ProductResponse.swift in Sources */,
 				EC1175582A667BB800452D2A /* ProductRepository.swift in Sources */,
 				EC84845C2A650389006AEAF8 /* Persistence.swift in Sources */,
 				EC11751B2A65A19000452D2A /* String+orEmpty.swift in Sources */,
