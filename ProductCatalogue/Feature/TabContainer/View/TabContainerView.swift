@@ -15,14 +15,14 @@ struct TabContainerView: View {
                 .tabItem {
                     Image(systemName: "square.grid.2x2.fill")
                     
-                    Text("Catalogue")
+                    Text(LocalizableString.catalogueTitle)
                 }
             
             FavoriteView()
                 .tabItem {
                     Image(systemName: "heart.fill")
                     
-                    Text("Favourite")
+                    Text(LocalizableString.favouriteTitle)
                 }
         }
     }

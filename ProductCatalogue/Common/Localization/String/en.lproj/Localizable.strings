@@ -5,3 +5,10 @@
   Created by Gus Adi on 18/07/23.
   
 */
+
+"general_internal_server_error" = "Sorry, we have problem on our internal server. Please try again later";
+
+"catalogue_title" = "Catalogue";
+"catalogue_search_placeholder" = "Find Products...";
+
+"favourite_title" = "Favourite";

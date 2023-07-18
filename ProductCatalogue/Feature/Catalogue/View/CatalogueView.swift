@@ -32,7 +32,7 @@ struct CatalogueView: View {
                 }
                 .listStyle(.plain)
             }
-            .navigationTitle("Catalogue")
+            .navigationTitle(LocalizableString.catalogueTitle)
             .toolbar {
                 Toggle("\(Image(systemName: "heart"))", isOn: $controller.isWishlist)
                     .foregroundColor(controller.isWishlist ? .white : .red)
@@ -41,7 +41,7 @@ struct CatalogueView: View {
             }
             
         }
-        .searchable(text: $controller.searchText, prompt: Text("Find Product..."))
+        .searchable(text: $controller.searchText, prompt: Text(LocalizableString.catalogueSearchPlaceholder))
     }
 }
 
