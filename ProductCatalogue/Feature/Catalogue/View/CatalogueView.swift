@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CatalogueView: View {
-    @ObservedObject var controller = CatalogController()
+    @ObservedObject var controller = CatalogueController()
     
     var body: some View {
         NavigationStack {
