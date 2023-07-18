@@ -14,6 +14,7 @@ final class FavouriteController: ObservableObject {
     @Published var localProducts = [Product]()
     @Published var products = [ProductResponse]()
     @Published var isLoading = false
+    @Published var isError = false
     @Published var error: String? = nil
     
     init(repository: ProductRepository = ProductDefaultRepository()) {
@@ -33,6 +34,7 @@ final class FavouriteController: ObservableObject {
     func startFetch() {
         self.isLoading = true
         self.error = nil
+        self.isError = false
         self.products = []
     }
     
@@ -47,9 +49,11 @@ final class FavouriteController: ObservableObject {
             self.products = data
         } catch (let e as ErrorResponse) {
             self.isLoading = false
+            self.isError = true
             self.error = e.message
         } catch {
             self.isLoading = false
+            self.isError = true
             self.error = error.localizedDescription
         }
     }
@@ -72,24 +76,30 @@ final class FavouriteController: ObservableObject {
     
     @MainActor
     func loadLocal() {
+        self.isError = false
+        
         do {
             let data = try repository.loadLocalproducts()
             
             self.localProducts = data
         } catch {
             self.isLoading = false
+            self.isError = true
             self.error = error.localizedDescription
         }
     }
     
     @MainActor
     func removeFavorite(_ item: ProductResponse) {
+        self.isError = false
+        
         do {
             try repository.deleteLocalProduct(item: item)
             
             self.localProducts = try repository.loadLocalproducts()
         } catch {
             self.isLoading = false
+            self.isError = true
             self.error = error.localizedDescription
         }
     }

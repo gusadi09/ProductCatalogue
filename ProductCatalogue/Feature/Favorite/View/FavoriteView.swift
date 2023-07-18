@@ -13,25 +13,39 @@ struct FavoriteView: View {
     var body: some View {
         NavigationStack {
             VStack {
-                List {
-                    LazyVGrid(columns: [GridItem(.adaptive(minimum: 150))]) {
-                        ForEach(controller.wishlistedFilter(), id: \.id) { product in
-                            ProductCard(
-                                item: product,
-                                isWishlisted: controller.isWishlisted(item: product),
-                                likeAction: {
-                                    controller.removeFavorite(product)
-                                }
-                            )
+                if controller.isLoading {
+                    Spacer()
+                    
+                    ProgressView()
+                        .progressViewStyle(.circular)
+                    
+                    Spacer()
+                } else {
+                    List {
+                        LazyVGrid(columns: [GridItem(.adaptive(minimum: 150))]) {
+                            ForEach(controller.wishlistedFilter(), id: \.id) { product in
+                                ProductCard(
+                                    item: product,
+                                    isWishlisted: controller.isWishlisted(item: product),
+                                    likeAction: {
+                                        controller.removeFavorite(product)
+                                    }
+                                )
+                            }
                         }
+                        .listRowSeparator(.hidden)
                     }
-                    .listRowSeparator(.hidden)
+                    .listStyle(.plain)
                 }
-                .listStyle(.plain)
             }
             .navigationTitle(LocalizableString.favouriteTitle)
             .onAppear {
                 controller.onAppear()
+            }
+            .alert(isPresented: $controller.isError) {
+                Alert(title: Text("Attention"), message: Text(controller.error.orEmpty()), dismissButton: .destructive(Text("Retry"), action: {
+                    controller.onAppear()
+                }))
             }
         }
     }
