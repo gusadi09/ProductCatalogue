@@ -15,9 +15,9 @@ struct CatalogueView: View {
             VStack {
                 List {
                     LazyVGrid(columns: [GridItem(.adaptive(minimum: 150))]) {
-                        ForEach(0...6, id: \.self) { idx in
+                        ForEach($controller.products, id: \.id) { product in
                             ProductCard(
-                                item: .constant(ProductResponse.sample),
+                                item: product,
                                 likeAction: {}
                             )
                         }
@@ -38,6 +38,9 @@ struct CatalogueView: View {
                     .foregroundColor(controller.isWishlist ? .white : .red)
                     .tint(Color.red)
 
+            }
+            .onAppear {
+                controller.onAppear()
             }
             
         }

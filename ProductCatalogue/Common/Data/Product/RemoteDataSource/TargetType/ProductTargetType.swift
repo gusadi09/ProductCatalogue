@@ -37,6 +37,16 @@ extension ProductTargetType: DefaultTargetType {
             return "/products"
         }
     }
+    
+    var sampleData: Data {
+        switch self {
+        case .getProducts:
+            return ProductsListResponse([
+                ProductResponse.sample,
+                ProductResponse.sample
+            ]).toJSONData()
+        }
+    }
 
     var method: Moya.Method {
         switch self {
