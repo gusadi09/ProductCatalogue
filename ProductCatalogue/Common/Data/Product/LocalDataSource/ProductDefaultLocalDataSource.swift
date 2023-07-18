@@ -43,6 +43,18 @@ final class ProductDefaultLocalDataSource: ProductLocalDataSource {
         }
     }
     
+    func deleteAllLocalProducts() throws {
+        let item = try loadLocalproducts()
+
+        for item in item {
+            container.viewContext.delete(item)
+        }
+
+        if container.viewContext.hasChanges {
+            try container.viewContext.save()
+        }
+    }
+    
     func loadLocalproducts() throws -> [Product] {
         let fetchReq = try container.viewContext.fetch(Product.fetchRequest())
 

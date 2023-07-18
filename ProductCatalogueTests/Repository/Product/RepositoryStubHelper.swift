@@ -49,6 +49,10 @@ final class RepositoryStubHelper: ProductRepository {
         try self.local.deleteProduct(item: item)
     }
     
+    func deleteAllLocalProducts() throws {
+        try self.local.deleteAllLocalProducts()
+    }
+    
     func loadLocalproducts() throws -> [ProductCatalogue.Product] {
         try self.local.loadLocalproducts()
     }

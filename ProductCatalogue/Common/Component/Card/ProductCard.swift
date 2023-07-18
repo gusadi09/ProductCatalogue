@@ -10,6 +10,7 @@ import SwiftUI
 struct ProductCard: View {
     
     var item: ProductResponse
+    @Binding var isWishlisted: Bool
     var likeAction: () -> Void
     
     var body: some View {
@@ -35,7 +36,7 @@ struct ProductCard: View {
                     Button {
                         likeAction()
                     } label: {
-                        Image(systemName: "heart")
+                        Image(systemName: isWishlisted ? "heart.fill" : "heart")
                             .resizable()
                             .scaledToFit()
                             .frame(height: 18)
@@ -70,7 +71,7 @@ struct ProductCard: View {
 struct ProductCard_Previews: PreviewProvider {
     static var previews: some View {
         LazyVGrid(columns: [GridItem(.adaptive(minimum: 150))]) {
-            ProductCard(item: ProductResponse.sample, likeAction: {})
+            ProductCard(item: ProductResponse.sample, isWishlisted: .constant(true), likeAction: {})
         }
     }
 }

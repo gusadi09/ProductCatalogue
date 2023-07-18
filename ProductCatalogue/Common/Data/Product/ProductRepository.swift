@@ -11,5 +11,6 @@ protocol ProductRepository {
     func getAllRemoteProducts() async throws -> ProductsListResponse
     func saveProductToLocal(item: ProductResponse) throws
     func deleteLocalProduct(item: ProductResponse) throws
+    func deleteAllLocalProducts() throws
     func loadLocalproducts() throws -> [Product]
 }

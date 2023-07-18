@@ -52,6 +52,18 @@ final class ProductRepositoryTests: XCTestCase {
         expectation.fulfill()
     }
     
+    func test_deleteAllLocal_withLoadLocalStorage_inMemmory() throws {
+        let expectation = XCTestExpectation(description: "deleteAllLocal")
+        
+        try sut.deleteAllLocalProducts()
+        
+        let data = try sut.loadLocalproducts()
+        
+        XCTAssertTrue(data.isEmpty)
+        
+        expectation.fulfill()
+    }
+    
     func test_deleteLocal_withLoadLocalStorage_inMemmory() throws {
         let expectation = XCTestExpectation(description: "deleteLocal")
         

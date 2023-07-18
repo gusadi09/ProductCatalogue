@@ -10,5 +10,6 @@ import Foundation
 protocol ProductLocalDataSource {
     func saveProduct(item: ProductResponse) throws
     func deleteProduct(item: ProductResponse) throws
+    func deleteAllLocalProducts() throws
     func loadLocalproducts() throws -> [Product]
 }

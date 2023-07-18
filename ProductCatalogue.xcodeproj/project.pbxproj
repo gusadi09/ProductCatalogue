@@ -48,7 +48,6 @@
 		EC8484612A650389006AEAF8 /* TabContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8484602A650389006AEAF8 /* TabContainerView.swift */; };
 		EC8484632A65038B006AEAF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC8484622A65038B006AEAF8 /* Assets.xcassets */; };
 		EC8484672A65038B006AEAF8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC8484662A65038B006AEAF8 /* Preview Assets.xcassets */; };
-		EC8484712A65038B006AEAF8 /* ProductCatalogueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8484702A65038B006AEAF8 /* ProductCatalogueTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,7 +103,6 @@
 		EC8484642A65038B006AEAF8 /* ProductCatalogue.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ProductCatalogue.entitlements; sourceTree = "<group>"; };
 		EC8484662A65038B006AEAF8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EC84846C2A65038B006AEAF8 /* ProductCatalogueTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProductCatalogueTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		EC8484702A65038B006AEAF8 /* ProductCatalogueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCatalogueTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -483,7 +481,6 @@
 			children = (
 				EC719D472A66B17900E1B0BD /* Controller */,
 				EC719D402A66A4ED00E1B0BD /* Repository */,
-				EC8484702A65038B006AEAF8 /* ProductCatalogueTests.swift */,
 			);
 			path = ProductCatalogueTests;
 			sourceTree = "<group>";
@@ -688,7 +685,6 @@
 				EC719D4D2A66B1B000E1B0BD /* FavouriteControllerTests.swift in Sources */,
 				EC719D452A66A83200E1B0BD /* ProductRepositoryTests.swift in Sources */,
 				EC719D4A2A66B19800E1B0BD /* CatalogueControllerTests.swift in Sources */,
-				EC8484712A65038B006AEAF8 /* ProductCatalogueTests.swift in Sources */,
 				EC719D432A66A51F00E1B0BD /* RepositoryStubHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

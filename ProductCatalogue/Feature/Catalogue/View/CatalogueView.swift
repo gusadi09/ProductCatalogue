@@ -15,21 +15,17 @@ struct CatalogueView: View {
             VStack {
                 List {
                     LazyVGrid(columns: [GridItem(.adaptive(minimum: 150))]) {
-                        ForEach(controller.products.filter({ item in
-                            controller
-                                .searchText
-                                .isEmpty ?
-                            true :
-                            item
-                                .title
-                                .orEmpty()
-                                .contains(
-                                    controller.searchText
-                                )
-                        }), id: \.id) { product in
+                        ForEach(controller.productFiltered(), id: \.id) { product in
                             ProductCard(
                                 item: product,
-                                likeAction: {}
+                                isWishlisted: controller.isWishlisted(item: product),
+                                likeAction: {
+                                    if controller.isWishlisted(item: product).wrappedValue {
+                                        controller.removeFavorite(product)
+                                    } else {
+                                        controller.saveToFavorite(product)
+                                    }
+                                }
                             )
                         }
                     }

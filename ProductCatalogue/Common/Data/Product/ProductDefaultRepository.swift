@@ -32,6 +32,10 @@ final class ProductDefaultRepository: ProductRepository {
         try self.local.deleteProduct(item: item)
     }
     
+    func deleteAllLocalProducts() throws {
+        try self.local.deleteAllLocalProducts()
+    }
+    
     func loadLocalproducts() throws -> [Product] {
         try self.local.loadLocalproducts()
     }
