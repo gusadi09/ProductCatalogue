@@ -40,8 +40,6 @@
 		EC719D3F2A668D0A00E1B0BD /* Encodable+toJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC719D3E2A668D0A00E1B0BD /* Encodable+toJSON.swift */; };
 		EC719D432A66A51F00E1B0BD /* RepositoryStubHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC719D422A66A51F00E1B0BD /* RepositoryStubHelper.swift */; };
 		EC719D452A66A83200E1B0BD /* ProductRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC719D442A66A83200E1B0BD /* ProductRepositoryTests.swift */; };
-		EC719D4A2A66B19800E1B0BD /* CatalogueControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC719D492A66B19800E1B0BD /* CatalogueControllerTests.swift */; };
-		EC719D4D2A66B1B000E1B0BD /* FavouriteControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC719D4C2A66B1B000E1B0BD /* FavouriteControllerTests.swift */; };
 		EC84845A2A650389006AEAF8 /* ProductCatalogueApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8484592A650389006AEAF8 /* ProductCatalogueApp.swift */; };
 		EC84845C2A650389006AEAF8 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC84845B2A650389006AEAF8 /* Persistence.swift */; };
 		EC84845F2A650389006AEAF8 /* ProductCatalogue.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EC84845D2A650389006AEAF8 /* ProductCatalogue.xcdatamodeld */; };
@@ -92,8 +90,6 @@
 		EC719D422A66A51F00E1B0BD /* RepositoryStubHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryStubHelper.swift; sourceTree = "<group>"; };
 		EC719D442A66A83200E1B0BD /* ProductRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRepositoryTests.swift; sourceTree = "<group>"; };
 		EC719D462A66ADC800E1B0BD /* ProductCatalogue.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = ProductCatalogue.xctestplan; sourceTree = "<group>"; };
-		EC719D492A66B19800E1B0BD /* CatalogueControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueControllerTests.swift; sourceTree = "<group>"; };
-		EC719D4C2A66B1B000E1B0BD /* FavouriteControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteControllerTests.swift; sourceTree = "<group>"; };
 		EC8484562A650389006AEAF8 /* ProductCatalogue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProductCatalogue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC8484592A650389006AEAF8 /* ProductCatalogueApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCatalogueApp.swift; sourceTree = "<group>"; };
 		EC84845B2A650389006AEAF8 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -414,31 +410,6 @@
 			path = Product;
 			sourceTree = "<group>";
 		};
-		EC719D472A66B17900E1B0BD /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				EC719D4B2A66B19C00E1B0BD /* FavouriteController */,
-				EC719D482A66B18400E1B0BD /* CatalogueController */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		EC719D482A66B18400E1B0BD /* CatalogueController */ = {
-			isa = PBXGroup;
-			children = (
-				EC719D492A66B19800E1B0BD /* CatalogueControllerTests.swift */,
-			);
-			path = CatalogueController;
-			sourceTree = "<group>";
-		};
-		EC719D4B2A66B19C00E1B0BD /* FavouriteController */ = {
-			isa = PBXGroup;
-			children = (
-				EC719D4C2A66B1B000E1B0BD /* FavouriteControllerTests.swift */,
-			);
-			path = FavouriteController;
-			sourceTree = "<group>";
-		};
 		EC84844D2A650389006AEAF8 = {
 			isa = PBXGroup;
 			children = (
@@ -479,7 +450,6 @@
 		EC84846F2A65038B006AEAF8 /* ProductCatalogueTests */ = {
 			isa = PBXGroup;
 			children = (
-				EC719D472A66B17900E1B0BD /* Controller */,
 				EC719D402A66A4ED00E1B0BD /* Repository */,
 			);
 			path = ProductCatalogueTests;
@@ -682,9 +652,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC719D4D2A66B1B000E1B0BD /* FavouriteControllerTests.swift in Sources */,
 				EC719D452A66A83200E1B0BD /* ProductRepositoryTests.swift in Sources */,
-				EC719D4A2A66B19800E1B0BD /* CatalogueControllerTests.swift in Sources */,
 				EC719D432A66A51F00E1B0BD /* RepositoryStubHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
