@@ -8,8 +8,44 @@
 import SwiftUI
 
 struct CatalogueView: View {
+    @ObservedObject var controller = CatalogueController()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+            VStack {
+                List {
+                    LazyVGrid(columns: [GridItem(.adaptive(minimum: 150))]) {
+                        ForEach(controller.productFiltered(), id: \.id) { product in
+                            ProductCard(
+                                item: product,
+                                isWishlisted: controller.isWishlisted(item: product),
+                                likeAction: {
+                                    if controller.isWishlisted(item: product).wrappedValue {
+                                        controller.removeFavorite(product)
+                                    } else {
+                                        controller.saveToFavorite(product)
+                                    }
+                                }
+                            )
+                        }
+                    }
+                    .listRowSeparator(.hidden)
+                }
+                .listStyle(.plain)
+            }
+            .navigationTitle(LocalizableString.catalogueTitle)
+            .toolbar {
+                Toggle("\(Image(systemName: "heart"))", isOn: $controller.isWishlist)
+                    .foregroundColor(controller.isWishlist ? .white : .red)
+                    .tint(Color.red)
+
+            }
+            .onAppear {
+                controller.onAppear()
+            }
+            
+        }
+        .searchable(text: $controller.searchText, prompt: Text(LocalizableString.catalogueSearchPlaceholder))
     }
 }
 

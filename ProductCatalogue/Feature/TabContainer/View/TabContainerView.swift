@@ -10,7 +10,21 @@ import CoreData
 
 struct TabContainerView: View {
     var body: some View {
-        Text("Hello World")
+        TabView {
+            CatalogueView()
+                .tabItem {
+                    Image(systemName: "square.grid.2x2.fill")
+                    
+                    Text(LocalizableString.catalogueTitle)
+                }
+            
+            FavoriteView()
+                .tabItem {
+                    Image(systemName: "heart.fill")
+                    
+                    Text(LocalizableString.favouriteTitle)
+                }
+        }
     }
 }
 

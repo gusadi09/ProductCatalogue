@@ -5,3 +5,10 @@
   Created by Gus Adi on 18/07/23.
   
 */
+
+"general_internal_server_error" = "Mohon maaf, saat ini sedang terjadi masalah pada server kami. Mohon coba beberapa saat lagi";
+
+"catalogue_title" = "Katalog";
+"catalogue_search_placeholder" = "Temukan Produk...";
+
+"favourite_title" = "Favorit";
