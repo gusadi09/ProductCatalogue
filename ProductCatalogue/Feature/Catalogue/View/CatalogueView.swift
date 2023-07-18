@@ -13,25 +13,34 @@ struct CatalogueView: View {
     var body: some View {
         NavigationStack {
             VStack {
-                List {
-                    LazyVGrid(columns: [GridItem(.adaptive(minimum: 150))]) {
-                        ForEach(controller.productFiltered(), id: \.id) { product in
-                            ProductCard(
-                                item: product,
-                                isWishlisted: controller.isWishlisted(item: product),
-                                likeAction: {
-                                    if controller.isWishlisted(item: product).wrappedValue {
-                                        controller.removeFavorite(product)
-                                    } else {
-                                        controller.saveToFavorite(product)
+                if controller.isLoading {
+                    Spacer()
+                    
+                    ProgressView()
+                        .progressViewStyle(.circular)
+                    
+                    Spacer()
+                } else {
+                    List {
+                        LazyVGrid(columns: [GridItem(.adaptive(minimum: 150))]) {
+                            ForEach(controller.productFiltered(), id: \.id) { product in
+                                ProductCard(
+                                    item: product,
+                                    isWishlisted: controller.isWishlisted(item: product),
+                                    likeAction: {
+                                        if controller.isWishlisted(item: product).wrappedValue {
+                                            controller.removeFavorite(product)
+                                        } else {
+                                            controller.saveToFavorite(product)
+                                        }
                                     }
-                                }
-                            )
+                                )
+                            }
                         }
+                        .listRowSeparator(.hidden)
                     }
-                    .listRowSeparator(.hidden)
+                    .listStyle(.plain)
                 }
-                .listStyle(.plain)
             }
             .navigationTitle(LocalizableString.catalogueTitle)
             .toolbar {
@@ -42,6 +51,18 @@ struct CatalogueView: View {
             }
             .onAppear {
                 controller.onAppear()
+            }
+            .alert(isPresented: $controller.isError) {
+                Alert(
+                    title: Text(LocalizableString.generalAttention),
+                    message: Text(controller.error.orEmpty()),
+                    dismissButton: .destructive(
+                        Text(LocalizableString.generalRetry),
+                        action: {
+                            controller.onAppear()
+                        }
+                    )
+                )
             }
             
         }

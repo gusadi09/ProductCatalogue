@@ -7,6 +7,8 @@
 */
 
 "general_internal_server_error" = "Mohon maaf, saat ini sedang terjadi masalah pada server kami. Mohon coba beberapa saat lagi";
+"general_attention" = "Perhatian";
+"general_retry" = "Coba Lagi";
 
 "catalogue_title" = "Katalog";
 "catalogue_search_placeholder" = "Temukan Produk...";

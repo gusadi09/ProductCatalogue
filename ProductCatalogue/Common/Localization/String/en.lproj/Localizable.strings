@@ -7,6 +7,8 @@
 */
 
 "general_internal_server_error" = "Sorry, we have problem on our internal server. Please try again later";
+"general_attention" = "Attention";
+"general_retry" = "Retry";
 
 "catalogue_title" = "Catalogue";
 "catalogue_search_placeholder" = "Find Products...";

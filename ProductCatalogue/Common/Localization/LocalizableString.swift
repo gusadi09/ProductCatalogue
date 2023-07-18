@@ -12,6 +12,14 @@ enum LocalizableString {
         "general_internal_server_error",
         comment: "for general usage of internal server error"
     )
+    static let generalAttention = NSLocalizedString(
+        "general_attention",
+        comment: "for general usage of attention text"
+    )
+    static let generalRetry = NSLocalizedString(
+        "general_retry",
+        comment: "for general usage of retry text"
+    )
     
     static let catalogueTitle = NSLocalizedString(
         "catalogue_title",
