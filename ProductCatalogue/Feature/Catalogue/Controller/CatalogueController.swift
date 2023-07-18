@@ -14,6 +14,8 @@ final class CatalogueController: ObservableObject {
     @Published var isWishlist = false
     
     @Published var products = [ProductResponse]()
+    @Published var isLoading = false
+    @Published var error: String? = nil
     
     init(repository: ProductRepository = ProductDefaultRepository()) {
         self.repository = repository
@@ -28,15 +30,27 @@ final class CatalogueController: ObservableObject {
     }
     
     @MainActor
+    func startFetch() {
+        self.isLoading = true
+        self.error = nil
+        self.products = []
+    }
+    
+    @MainActor
     func loadRemoteProducts() async {
+        startFetch()
+        
         do {
             let data = try await repository.getAllRemoteProducts()
             
+            self.isLoading = false
             self.products = data
         } catch (let e as ErrorResponse) {
-            print(e.message.orEmpty())
+            self.isLoading = false
+            self.error = e.message
         } catch {
-            print(error.localizedDescription)
+            self.isLoading = false
+            self.error = error.localizedDescription
         }
     }
 }

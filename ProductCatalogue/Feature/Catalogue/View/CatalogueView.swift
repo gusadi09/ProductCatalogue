@@ -15,7 +15,18 @@ struct CatalogueView: View {
             VStack {
                 List {
                     LazyVGrid(columns: [GridItem(.adaptive(minimum: 150))]) {
-                        ForEach($controller.products, id: \.id) { product in
+                        ForEach(controller.products.filter({ item in
+                            controller
+                                .searchText
+                                .isEmpty ?
+                            true :
+                            item
+                                .title
+                                .orEmpty()
+                                .contains(
+                                    controller.searchText
+                                )
+                        }), id: \.id) { product in
                             ProductCard(
                                 item: product,
                                 likeAction: {}
@@ -23,12 +34,6 @@ struct CatalogueView: View {
                         }
                     }
                     .listRowSeparator(.hidden)
-                    
-                    Text("")
-                        .onAppear {
-                            print("Last")
-                        }
-                        .listRowSeparator(.hidden)
                 }
                 .listStyle(.plain)
             }

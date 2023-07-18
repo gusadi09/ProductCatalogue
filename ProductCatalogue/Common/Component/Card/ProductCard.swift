@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ProductCard: View {
     
-    @Binding var item: ProductResponse
+    var item: ProductResponse
     var likeAction: () -> Void
     
     var body: some View {
@@ -70,7 +70,7 @@ struct ProductCard: View {
 struct ProductCard_Previews: PreviewProvider {
     static var previews: some View {
         LazyVGrid(columns: [GridItem(.adaptive(minimum: 150))]) {
-            ProductCard(item: .constant(ProductResponse.sample), likeAction: {})
+            ProductCard(item: ProductResponse.sample, likeAction: {})
         }
     }
 }
